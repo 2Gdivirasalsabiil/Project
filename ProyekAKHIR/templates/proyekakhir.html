@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diraaa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS (Glyphicons) -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Lato Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .mono {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: #ffffff !important; /* Gunakan !important untuk memastikan prioritas tertinggi */
+        }
+
+        .judul {
+            color: #28ace5 !important; /* Gunakan !important untuk memastikan prioritas tertinggi */
+        }
+    </style>        
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #28ace5;">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <img src="{{ url_for('static', filename='/images/Orbit.jpg') }}" alt="Logo Orbit" width="50" height="50" align="left">
+                <a class="navbar-brand mono" href="#halamanku">&#160; Orbit Future Academy</a>
+            </div>
+
+            <!-- Daftar Halaman -->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#informasi" class="mono">INFORMASI</a></li>
+                    <li><a href="#aplikasi" class="mono">APLIKASI</a></li>
+                    <li><a href="#anggotaKelompok" class="mono">ANGGOTA KELOMPOK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Bagian Halaman (Informasi) -->
+    <div id="informasi" class="container-fluid">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="judul">CV</h2>
+                <br>
+                <h4 class="judul">Computer Vision Segmentation</h4>
+                <br>
+                <br>
+                <br>
+                
+                <p style="text-align: justify; text-justify: inter-word; color: #666 !important; font-size: 18px;">
+                    Flood area segmentation adalah proses pengidentifikasian dan pemisahan area yang terkena banjir dalam citra atau peta,
+                    biasanya menggunakan teknologi pemrosesan citra digital atau pemetaan geografis. 
+                    Proses segmentasi banjir melibatkan pemisahan daerah yang tergenang air dari daerah yang tidak terkena
+                    dampak banjir. Hal ini dapat mencakup berbagai teknik pemrosesan citra dan analisis data geografis, 
+                    seperti deteksi perubahan dalam tingkat kecerahan atau warna citra, analisis elevasi, atau penggunaan data sensori seperti 
+                    radar dan satelit. Hasil dari segmentasi ini dapat digunakan untuk mengidentifikasi 
+                    daerah-daerah yang memerlukan bantuan darurat, perencanaan evakuasi, atau penilaian kerusakan akibat banjir.
+                </p>
+                <br>
+                <br>
+
+                <!-- Tombol Mulai -->
+                <nav id="navgo" class="navbar" style="background-color: #ffffff;z-index: 0;">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="btn btn-default btn-lg" href="#aplikasi" style="background-color: #28ace5; color: #ffffff;">M u l a i</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <!-- Gambar Deskripsi Aplikasi -->
+                <div align="center">
+                    <img src="{{ url_for('static', filename='/images/gambar1.jpeg') }}" height="300">
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- Bagian Halaman (Aplikasi) -->
+    <div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <br>
+                <h3 style="margin-left: 50px;">Upload Gambar</h3>
+                <form style="margin-left: 50px;">
+                    <!-- Input Atau Upload Gambar dari User -->
+                    <img src="{{ url_for('static', filename='/images/banjir.jpg') }}" width="300">
+                    <p>Silahkan Upload Sebuah Gambar</p>
+                    <p>
+                        <input type="file" id="input_gambar" name="file">
+                    </p>
+                    <br>
+                    <!-- Tombol Prediksi -->
+                    <button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <!-- Bagian Halaman Untuk Hasil Prediksi -->
+                <div id="hasil_prediksi" align="center">
+                    <!-- Hasil Prediksi akan Tampil Disini -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <!-- Bagian Halaman (Anggota Kelompok) -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div id="anggotaKelompok" class="container-fluid text-center">
+        <br>
+        <h2>ANGGOTA KELOMPOK</h2>
+        <h4>Tim Deployment dan Tim CV</h4>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Ilham Rafi Ephysiawan</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Divira Salsabiil Susanto</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Arifatul Azibah</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Febriyanto</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Rahma Nurmalita</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-user logo-small"></span>
+                <h4>Dinda Nabilla Ariestya</h4>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer class="container-fluid text-center">
+        <a href="#halamanku" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/"></a></p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

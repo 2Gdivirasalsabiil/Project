@@ -1,0 +1,9 @@
+- Install Python dulu, ntar masuk ke direktorinya.
+teros ntar running aja python app.py
+
+- cmd- code .
+
+- pip install flask
+python app.py
+
+  
